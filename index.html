@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Editable Resume Builder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>  Editable Resume Builder </h1>
+    
+    <!-- Resume Form -->
+    <form id="resumeForm">
+      <div>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+      <div>
+        <label for="skills">Skills:</label>
+        <input type="text" id="skills" name="skills" placeholder="e.g., HTML, CSS, JavaScript" required>
+      </div>
+      <div>
+        <label for="experience">Experience:</label>
+        <textarea id="experience" name="experience" required></textarea>
+      </div>
+      <button type="submit">Generate Resume</button>
+    </form>
+    
+    <!-- Editable Resume Section -->
+    <div id="resumeOutput" class="resume-output">
+      <h2>Your Resume (Editable)</h2>
+      <p id="outputName" contenteditable="true"></p>
+      <p id="outputEmail" contenteditable="true"></p>
+      <p id="outputPhone" contenteditable="true"></p>
+      <p id="outputSkills" contenteditable="true"></p>
+      <p id="outputExperience" contenteditable="true"></p>
+      <button id="saveChanges">Save Changes</button>
+    </div>
+  </div>
+
+  <script src="dist/script.js"></script>
+</body>
+</html>
